@@ -1,12 +1,18 @@
-﻿Console.WriteLine("Please type your name");
+﻿var date = DateTime.Now;
 
-var name = Console.ReadLine();
-var date = DateTime.Now;
+string name = GetName();
 
-Menu(name, date);
+Menu(name);
 
+string GetName()
+{
+    Console.WriteLine("Please type your name");
 
-void Menu(string? name, DateTime date)
+    var name = Console.ReadLine();
+    return name;
+}
+
+void Menu(string name)
 {
     Console.WriteLine("--------------------------");
     Console.WriteLine($"Hello {name.ToUpper()}. It's {date.DayOfWeek}. This is your math's game. It is great that you are working on improving yourself\n");
@@ -64,3 +70,4 @@ void DivisionGame(string message)
 {
     Console.WriteLine(message);
 }
+
