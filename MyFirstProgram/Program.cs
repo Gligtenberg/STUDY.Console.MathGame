@@ -150,6 +150,23 @@ void MultiplecationGame(string message)
 void DivisionGame(string message)
 {
     Console.WriteLine(message);
-
+    GetDivisionNumbers();
 }
+
+
+int[] GetDivisionNumbers()
+{
+    var random = new Random();
+    var firstNumber = random.Next(0, 99);
+    var secondNumber = random.Next(0, 99);
+
+    var result = new int[2];
+
+    result[0] = firstNumber;
+    result[1] = secondNumber;
+
+    Console.WriteLine(result);
+
+    return result;
+} 
 
