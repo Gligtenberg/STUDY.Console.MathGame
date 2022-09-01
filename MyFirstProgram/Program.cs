@@ -17,19 +17,19 @@ var gameSelected = Console.ReadLine();
 
 if (gameSelected.Trim().ToLower() == "a")
 {
-    Console.WriteLine("Addition game selected");
+    AdditionGame("Addition Game Selected");
 }
 else if (gameSelected.Trim().ToLower() == "s")
 {
-    Console.WriteLine("Substraction game selected");
+    SubstractionGame("Substraction game selected");
 }
 else if (gameSelected.Trim().ToLower() == "m")
 {
-    Console.WriteLine("Multiplecation game selected");
+    MultiplecationGame("Multiplecation game selected");
 }
 else if (gameSelected.Trim().ToLower() == "d")
 {
-    Console.WriteLine("Division game selected");
+    DivisionGame("Division game selected");
 }
 else if (gameSelected.Trim().ToLower() == "q")
 {
@@ -39,4 +39,21 @@ else if (gameSelected.Trim().ToLower() == "q")
 else
 {
     Console.WriteLine("Invalid input");
+}
+
+void AdditionGame(string message)
+{
+    Console.WriteLine(message);
+}
+void SubstractionGame(string message)
+{
+    Console.WriteLine(message);
+}
+void MultiplecationGame(string message)
+{
+    Console.WriteLine(message);
+}
+void DivisionGame(string message)
+{
+    Console.WriteLine(message);
 }
