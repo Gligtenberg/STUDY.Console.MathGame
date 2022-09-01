@@ -87,15 +87,69 @@ void AdditionGame(string message)
 void SubstractionGame(string message)
 {
     Console.WriteLine(message);
+    var random = new Random();
+    var score = 0;
+
+    int firstNumber;
+    int secondNumber;
+
+    for (int i = 0; i < 5; i++)
+    {
+        firstNumber = random.Next(1, 9);
+        secondNumber = random.Next(1, 9);
+
+        Console.WriteLine($"{firstNumber} - {secondNumber}");
+        var result = Console.ReadLine();
+
+        if (int.Parse(result) == firstNumber - secondNumber)
+        {
+            Console.WriteLine("Your answer was correct!");
+            score++;
+        }
+        else
+        {
+            Console.WriteLine("Your answer was incorrect.");
+        }
+
+        if (i == 4) Console.WriteLine($"Game Over. Your final score is {score}");
+    }
 }
 
 void MultiplecationGame(string message)
 {
     Console.WriteLine(message);
+
+    var random = new Random();
+    var score = 0;
+
+    int firstNumber;
+    int secondNumber;
+
+    for (int i = 0; i < 5; i++)
+    {
+        firstNumber = random.Next(1, 9);
+        secondNumber = random.Next(1, 9);
+
+        Console.WriteLine($"{firstNumber} * {secondNumber}");
+        var result = Console.ReadLine();
+
+        if (int.Parse(result) == firstNumber * secondNumber)
+        {
+            Console.WriteLine("Your answer was correct!");
+            score++;
+        }
+        else
+        {
+            Console.WriteLine("Your answer was incorrect.");
+        }
+
+        if (i == 4) Console.WriteLine($"Game Over. Your final score is {score}");
+    }
 }
 
 void DivisionGame(string message)
 {
     Console.WriteLine(message);
+
 }
 
