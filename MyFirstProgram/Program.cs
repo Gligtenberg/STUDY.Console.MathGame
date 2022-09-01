@@ -56,19 +56,30 @@ void AdditionGame(string message)
     Console.WriteLine(message);
 
     var random = new Random();
-    int firstNumber = random.Next(1, 9);
-    int secondNumber = random.Next(1, 9);
+    var score = 0;
 
-    Console.WriteLine($"{firstNumber} + {secondNumber}");
-    var result = Console.ReadLine();
+    int firstNumber;
+    int secondNumber;
 
-    if(int.Parse(result) == firstNumber + secondNumber)
+    for(int i=0; i < 5; i++)
     {
-        Console.Write("Your answer was correct!");
-    }
-    else
-    {
-        Console.WriteLine("Your answer was incorrect.");
+        firstNumber = random.Next(1, 9);
+        secondNumber = random.Next(1, 9);
+
+        Console.WriteLine($"{firstNumber} + {secondNumber}");
+        var result = Console.ReadLine();
+
+        if (int.Parse(result) == firstNumber + secondNumber)
+        {
+            Console.WriteLine("Your answer was correct!");
+            score++;
+        }
+        else
+        {
+            Console.WriteLine("Your answer was incorrect.");
+        }
+
+        if (i == 4) Console.WriteLine($"Game Over. Your final score is {score}");
     }
 
 }
