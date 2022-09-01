@@ -165,6 +165,11 @@ int[] GetDivisionNumbers()
     result[0] = firstNumber;
     result[1] = secondNumber;
 
+    foreach (var number in result)
+    {
+        Console.WriteLine($"Array element = {number}");
+    }
+
     Console.WriteLine(result);
 
     return result;
